@@ -27,9 +27,25 @@
         "host": "localhost",
         "port": 8500
     },
-    "clusters": 10,
+    "clusters": 1,
     "log": {
-        "logLevel": "info",
+        "logLevel": "debug",
         "dumpLevel": "error"
+    },
+    "dynamodb": {
+        "endpoint": "http://localhost:8001",
+        "region": "us-west-1",
+        "accessKey": "",
+        "secretKey": "",
+        "objects": {
+            "tableName": "S3Objects",
+            "readCapacityUnits": 1,
+            "writeCapacityUnits": 1
+        },
+        "buckets": {
+            "tableName": "S3Buckets",
+            "readCapacityUnits": 1,
+            "writeCapacityUnits": 1
+        }
     }
 }
